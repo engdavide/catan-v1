@@ -1,0 +1,19 @@
+{
+  "name": "catan",
+  "version": "1.0.0",
+  "description": "catan implementation",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engdavide/catan-v1.git"
+  },
+  "author": "David Eng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engdavide/catan-v1/issues"
+  },
+  "homepage": "https://github.com/engdavide/catan-v1#readme"
+}
