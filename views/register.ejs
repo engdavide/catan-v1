@@ -1,0 +1,44 @@
+<%- include('partials/header.ejs') %>
+
+  <div class="container container-signin">
+    <div>
+      <% if (typeof(message) != 'undefined') { %>
+        <h3><%= message %></h3>
+      <% } %>
+    </div>  
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Register Here</h5>
+            <form action="/register", method="POST" class="form-signin">
+              <div class="form-label-group">
+                <input type="text" name="newUsername" id="inputUser" class="form-control" required autofocus>
+                <label for="inputUser">Username</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" name="newPassword" id="inputPassword" class="form-control" autocomplete="new-password" required>
+                <label for="inputPassword">Password</label>
+              </div>
+
+              <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+    $( 'input' ).change(function(){
+        if($( this ).val() != ""){
+            $( this ).addClass('not-blank')
+        } else {
+            $( this ).removeClass('not-blank')
+        }
+        console.log($( this ).val())
+    });
+</script>  
+
+<%- include('partials/footer.ejs') %>
